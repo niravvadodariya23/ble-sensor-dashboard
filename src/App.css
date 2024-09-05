@@ -1,0 +1,50 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.sensor-tabs .tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.sensor-tabs .tabs button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background-color 0.3s;
+}
+
+.sensor-tabs .tabs button.active {
+  background-color: #0056b3;
+}
+
+.sensor-tabs .tabs button:hover {
+  background-color: #0056b3;
+}
+
+.tab-content {
+  width: 100%;
+  max-width: 600px;
+}
+
+canvas {
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+}

@@ -1,0 +1,93 @@
+/* Sidebar container */
+.sidenav {
+    height: 100%;
+    width: 0; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0d0d0ea8; /* Darker background for a modern look */
+    overflow-x: hidden;
+    transition: 1s; /* Smooth transition */
+    padding-top: 100px;
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  }
+  
+  .sidenav.open {
+    width: 280px; /* Expanded width */
+  }
+  
+  .sidenav a {
+    padding: 16px 24px; /* More padding for a clean look */
+    text-decoration: none;
+    font-size: 18px;
+    color: #ecf0f1; /* Light text color */
+    display: block;
+    border-radius: 8px; /* Rounded corners for a modern touch */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Smooth transitions */
+  }
+  
+  .sidenav a:hover {
+    background-color: #3498db; /* Accent color for hover effect */
+    color: white;
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+  
+  .sidenav a.active {
+    background-color: #2980b9; /* Different color for active link */
+    color: white;
+    font-weight: bold;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 30px;
+    right: 25px;
+    font-size: 36px;
+    cursor: pointer;
+    color: #ecf0f1;
+    transition: color 0.3s; /* Smooth color transition */
+  }
+  
+  .sidenav .closebtn:hover {
+    color: #3498db; /* Change color on hover */
+  }
+  
+  /* Hamburger button */
+  .openbtn {
+    font-size: 30px;
+    cursor: pointer;
+    color: #2c3e50;
+    padding: 15px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    transition: color 0.3s; /* Smooth color transition */
+  }
+  
+  .openbtn:hover {
+    color: #3498db; /* Change color on hover */
+  }
+  
+  #main {
+    transition: margin-left 0.5s; /* Smooth transition for main content */
+    padding: 16px;
+  }
+  
+  @media (max-width: 768px) {
+    .sidenav {
+      width: 100%;
+    }
+  
+    .sidenav.open {
+      width: 100%;
+    }
+  
+    .openbtn {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+    }
+  }
+  
