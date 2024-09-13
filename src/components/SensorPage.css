@@ -1,87 +1,103 @@
+/* Main page styling */
 .sensor-page {
-    padding: 40px 20px;
-    background-color: #1e1e2f; /* Dark background color for the main page */
-    color: #f5f5f5; /* Light text color */
-    min-height: 100vh;
-    text-align: center;
-  }
-  
-  .sensor-page h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #ffffff; /* White color for headings */
-  }
-  
-  .sensor-page p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    color: #cccccc; /* Light grey for text */
-  }
-  
-  .sensor-tabs-container {
-    background-color: #2c2c3a; /* Slightly lighter dark background for the container */
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Darker shadow */
-    padding: 20px;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  
-  .sensor-tabs {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-    position: relative;
-  }
-  
-  .sensor-tab {
-    flex: 1;
-    text-align: center;
-    padding: 15px 0;
-    cursor: pointer;
-    font-size: 1.1rem;
-    color: #bbbbbb; /* Light grey for inactive tabs */
-    transition: color 0.3s ease;
-    position: relative;
-    z-index: 1;
-  }
-  
-  .sensor-tab.active {
-    color: #007bff; /* Bright blue for active tab */
-  }
-  
-  .sensor-tab::after {
-    content: '';
-    display: block;
-    height: 3px;
-    background-color: transparent;
-    transition: all 0.3s ease;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 0;
-  }
-  
-  .sensor-tab.active::after {
-    width: 50%;
-    background-color: #007bff;
-  }
-  
-  .sensor-tab:hover {
-    color: #007bff;
-  }
-  
-  .chart-container {
-    padding: 20px;
-    background-color: #ffffff; /* Keeping the chart container background light */
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for chart container */
-  }
-  
-  canvas {
-    max-width: 100%;
-    height: auto;
-  }
-  
+  padding: 40px 20px;
+  background-color: #121212; /* Dark background for the main page */
+  color: #e0e0e0; /* Light text color */
+  min-height: 100vh;
+  text-align: center;
+  font-family: 'Arial', sans-serif; /* Ensure the font family is consistent */
+}
+
+.sensor-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #bb86fc; /* Soft purple color for headings */
+}
+
+.sensor-page p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #b0b0b0; /* Light grey color for text */
+}
+
+.content-container {
+  background-color: #1f1f1f; /* Slightly lighter dark background for content container */
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Darker shadow for container */
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.connected-info {
+  font-size: 1.1rem;
+  color: #03dac5; /* Teal color for connected info */
+  margin-top: 10px;
+}
+
+.sensor-tabs-container {
+  background-color: #232323; /* Dark grey background for tabs container */
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Darker shadow */
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sensor-tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.sensor-tab {
+  flex: 1;
+  text-align: center;
+  padding: 15px 0;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #bb86fc; /* Soft purple color for inactive tabs */
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.sensor-tab.active {
+  color: #03dac5; /* Teal color for active tab */
+}
+
+.sensor-tab::after {
+  content: '';
+  display: block;
+  height: 3px;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0;
+}
+
+.sensor-tab.active::after {
+  width: 50%;
+  background-color: #03dac5; /* Teal underline for active tab */
+}
+
+.sensor-tab:hover {
+  color: #03dac5; /* Teal color on hover */
+}
+
+.chart-container {
+  padding: 20px;
+  background-color: #121212; /* Dark background for chart container */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Dark shadow for chart container */
+}
+
+canvas {
+  max-width: 100%;
+  height: auto;
+}
