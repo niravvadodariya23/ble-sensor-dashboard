@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(to right, #141e30, #243b55); /* Dark gradient background */
+    background: #121212; /* Dark gradient background */
     color: #fff;
     text-align: center;
     padding: 20px;
