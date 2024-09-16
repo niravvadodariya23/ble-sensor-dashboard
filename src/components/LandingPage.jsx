@@ -7,6 +7,10 @@ const LandingPage = () => {
   return (
     <div className="landing-page">
       <SideNav />
+      <div className="auth-buttons">
+        <Link to="/login" className="auth-button">Log in</Link>
+        <Link to="/signup" className="auth-button">Sign up</Link>
+      </div>
       <div className="landing-content">
         <h1>Welcome to the Sensor Data Dashboard</h1>
         <p>

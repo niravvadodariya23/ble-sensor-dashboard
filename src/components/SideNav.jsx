@@ -19,11 +19,17 @@ const SideNav = () => {
         <Link to="/sensors" className="nav-link">
           <i className="fas fa-tachometer-alt"></i> Sensor Data
         </Link>
-        <Link to="/about-us" className="nav-link">
+        <Link to="/about" className="nav-link">
           <i className="fas fa-info-circle"></i> About Us
         </Link>
-        <Link to="/contact-us" className="nav-link">
+        <Link to="/contact" className="nav-link">
           <i className="fas fa-envelope"></i> Contact Us
+        </Link>
+        <Link to="/login" className="nav-link">
+          <i class="fa-solid fa-right-to-bracket"></i> Log In
+        </Link>
+        <Link to="/signup" className="nav-link">
+          <i class="fa-solid fa-user"></i> Sign Up
         </Link>
       </div>
       <div id="main">
