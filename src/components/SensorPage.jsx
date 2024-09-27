@@ -25,7 +25,27 @@ const SensorPage = () => {
 
     } catch (error) {
       console.error("Bluetooth connection failed", error);
+
+      // TEMPORARY: Simulate sensor data if connection fails
+      var i = 0;
+      setInterval(() => {
+        i = i === 0 ? 1 : 0;
+        const { buffer } = i === 0 
+          ? new Uint8Array([2, 2, 3, 1, 1, 2, 1, 1]) 
+          : new Uint8Array([1, 2, 3, 4, 1, 1, 1, 1]);
+
+        const dataview = new DataView(buffer);
+        handleTemperatureChange({ target: { value: dataview } });
+      }, 1000); // Simulate data every second
     }
+  };
+
+  // Simulated data handler
+  const handleTemperatureChange = (event) => {
+    const dataView = event.target.value;
+    const temperature = dataView.getUint8(0); // Example of getting temperature data from the first byte
+    console.log(`Simulated Temperature Data: ${temperature}°C`);
+    // You can update state or pass this data to your charts
   };
 
   return (
@@ -43,6 +63,12 @@ const SensorPage = () => {
 };
 
 const styles = {
+  container: {
+    padding: '20px',
+    backgroundColor: '#333', // Dark background
+    color: 'white',
+    minHeight: '100vh',
+  }
 };
 
 export default SensorPage;
